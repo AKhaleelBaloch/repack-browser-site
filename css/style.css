@@ -435,6 +435,93 @@ nav{
     line-height:1.8;
 }
 
+.screenshots{
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+    padding-bottom:80px;
+}
+
+.screenshotGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+.screenshotCard{
+
+    background:#1b1f26;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.3s;
+}
+
+.screenshotCard:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#4fa3ff;
+
+}
+
+.screenshotCard img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.screenshotCard textarea{
+
+    width:100%;
+
+    margin-top:20px;
+
+    min-height:120px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    background:#0d1117;
+
+    color:#fff;
+
+    padding:18px;
+
+    resize:vertical;
+
+    font-family:inherit;
+
+    font-size:15px;
+
+    line-height:1.6;
+}
+
+.screenshotCard textarea:focus{
+
+    outline:none;
+
+    border-color:#4fa3ff;
+
+    box-shadow:0 0 0 3px rgba(79,163,255,.12);
+
+}
+
 .donationGrid{
 
     width:min(1200px,90%);
@@ -628,4 +715,57 @@ nav{
     transform:translateY(0);
 }
 
+/* ===========================
+   Lightbox / Image modal
+=========================== */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    background:rgba(5,7,10,0.75);
+    z-index:10000;
+    padding:40px;
+}
+
+.lightbox.show{
+    display:flex;
+}
+
+.lightbox .content{
+    max-width:1100px;
+    width:100%;
+    max-height:90vh;
+    border-radius:12px;
+    overflow:hidden;
+    background:#0d1117;
+    padding:12px;
+    position:relative;
+}
+
+.lightbox img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:8px;
+}
+
+.lightbox .close{
+    position:absolute;
+    top:12px;
+    right:12px;
+    color:#fff;
+    background:rgba(0,0,0,0.45);
+    border-radius:8px;
+    padding:8px 10px;
+    cursor:pointer;
+    font-size:18px;
+    border:1px solid rgba(255,255,255,0.06);
+}
+
+.screenshotCard img{
+    cursor:zoom-in;
+}
 
